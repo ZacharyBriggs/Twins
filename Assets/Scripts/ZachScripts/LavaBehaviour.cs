@@ -5,22 +5,8 @@ using Luke;
 
 namespace ZachScripts
 {
-    public class SpikeBehaviour : FloorHazard
+    public class LavaBehaviour : FloorHazard
     {
-        private void Start()
-        {
-            collider = GetComponent<BoxCollider>();
-            collider.enabled = false;
-            timer = RoD;
-        }
-        private void Update()
-        {
-            if(CheckTimer())
-            {
-
-            }
-        }
-
         private void OnTriggerStay(Collider other)
         {
             var character = other.gameObject.GetComponent<CharacterBehaviour>();
